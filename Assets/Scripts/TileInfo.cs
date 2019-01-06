@@ -14,7 +14,7 @@ public class TileInfo : MonoBehaviour
     }
 
     public Terrain TileTerrain;
-    public BaseBuilding buildingHere; //There can only be one building on a tile
+    public BuildingData buildingHere; //There can only be one building on a tile
     public bool hasBuilding; //For quick checking whether or not a construction has taken place
     public Vector2Int mapCoords; //The coordinates on the MapGrid that this Tile has
 

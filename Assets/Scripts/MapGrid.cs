@@ -40,7 +40,6 @@ public class MapGrid : MonoBehaviour
         parseMap = parseMap.Replace("\r", string.Empty);
         Debug.Log("Map is size " + width + ", " + height);
         tiles = new TileInfo[width, height];
-        Debug.Log(parseMap);
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
@@ -51,7 +50,6 @@ public class MapGrid : MonoBehaviour
                 TileInfo info = tile.GetComponent<TileInfo>();
                 info.mapCoords = new Vector2Int(x, y);
                 char c = parseMap[x * width + y];
-                Debug.Log("Parsing map character: " + c);
                 if (c.Equals('f'))
                     info.TileTerrain = TileInfo.Terrain.Field;
                 if (c.Equals('w'))

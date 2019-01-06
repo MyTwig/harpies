@@ -1,0 +1,12 @@
+[
+{
+	"buildingName" : "Farm",
+	"changeValues" : {"resourceName" : "Food", "changeAmount" : 1, "timeFrequency" : 1},
+	"spritePath" : "Art/square"
+},
+{
+	"buildingName" : "300 Food",
+	"rules" : {"resourcesNeeded" : [{"resourceName" : "Food", "amount" : 300}], "consumedResources" : [{"resourceName" : "Food", "amount" : 300}]},
+	"spritePath" : "Art/square"
+}
+]

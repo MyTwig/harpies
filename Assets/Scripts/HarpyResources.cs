@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Resources : MonoBehaviour
+public class HarpyResources : MonoBehaviour
 {
-    public static Resources instance;
+    public static HarpyResources instance;
     public string[] resources;
     private float[] values; //A dictionary would work better, but I don't want to write anything custom for the editor...
 

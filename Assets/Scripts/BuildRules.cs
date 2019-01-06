@@ -24,7 +24,7 @@ public class BuildRules
     [Serializable]
     public class TerrainRequirement
     {
-        TileInfo.Terrain terrain; //The terrain enum that each tile in the construction area must match
+        public TileInfo.Terrain terrain; //The terrain enum that each tile in the construction area must match
     }
 
     public ResourcePair[] resourcesNeeded; //Every entry in here must be fulfilled or construction can't take place
@@ -42,7 +42,7 @@ public class BuildRules
             for (int i = 0; i < rules.resourcesNeeded.Length; i++)
             { //Loop through every resource in the array and exit early if we haven't met a condition
                 ResourcePair pair = rules.resourcesNeeded[i];
-                if (Resources.instance.GetResourceAmount(pair.resourceName) < pair.amount)
+                if (HarpyResources.instance.GetResourceAmount(pair.resourceName) < pair.amount)
                     return false;
             }
             return true;
